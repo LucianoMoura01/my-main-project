@@ -1,60 +1,207 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ballet Débora Moura</title>
-        <link rel="stylesheet" href="styles.css">
-	<link rel="shortcut icon"  href="img/8.png" type="image/logo_icon">
-    </head>
-	
-    <body>
-        <header>
-            <div class="header">
-                <nav  class="logo">
-                    <img src= "img/logo_superior_branco.png" alt= "minilogo" style="width: 60%;">
-                </nav>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ballet Débora Moura</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/8.png" type="image/png">
+</head>
 
+<body>
+    <header class="site-header" id="top">
+        <div class="container header-inner">
+            <a href="#top" class="logo-link">
+                <img src="img/logo_superior_branco.png" alt="Ballet Débora Moura" class="logo-img">
+            </a>
+            <button class="menu-toggle" aria-expanded="false" aria-controls="main-menu">Menu</button>
+            <nav id="main-menu" class="main-menu" aria-label="Navegação principal">
+                <ul class="menu">
+                    <li><a href="#hero">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#modalidades">Modalidades</a></li>
+                    <li><a href="#agenda">Agenda</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section id="hero" class="hero">
+            <div class="hero-overlay">
+                <div class="container hero-content">
+                    <img src="img/logo_nome_branco.png" alt="Ballet Débora Moura" class="hero-logo">
+                    <p class="hero-subtitle">Formando bailarinos com técnica, carinho e disciplina.</p>
+                    <a href="#contato" class="btn btn-primary">Agende uma aula experimental</a>
+                </div>
             </div>
-        </header>
-        
-        <main class="container mx-auto mt-8">
+            <img src="img/ia01.png" alt="Alunos em apresentação" class="hero-image">
+        </section>
 
-		<section id="galeria" class="galeria">
-			<div class="galeria-video">
-                	<video src= "video/001.mp4" alt= "001" style= "width:60%; height: auto;" controls></video>
-                	</div>
-			<img src= "img/logo_nome.png" alt="001" style= "width: auto;">   
-<!--<h4>Galeria</h4>-->
-        		<div class="galeria_carrossel">
-				<div class="galeria_imagens">
-                    		<img src= "img/Penguins.jpg" alt= "Reunião2024">
-				<img scr="img/1.png" alt="logomarca">
-				<img scr="img/logo4.jpeg" alt="logo4">
-				<img scr="img/logo5.jpeg" alt="logo5">
-				<img scr="img/5.png" alt="img5">
-				</div>
-        		</div>
-        	</section>
-		<section id="quem_sou_eu" alt="quem_sou_eu">
-			<h3>Quem sou eu</h3>
-			<p>Acredito que a dança é uma poderosa ferramenta de desenvolvimento físioco, emocional e social. Estou comprometida em criar um ambiente acolhedor e inpirador, onde cada criança possa expressar sua criatividade, desenvolver suas habilidades técnicas e, acima de tudo, se divertir.<br>A dança sempre foi minha paixão, e ao longo dos anos, me dediquei a estudar e perfeiçoar para o melhor aos meus alunos. Tenho formações em:</p>
-			<ul>
-				<li><p>Metodologia da Dança</p></li>
-				<li><p>Psicopedagodança</p></li>
-				<li><p>Educação  Física (cursando)</p></li>
-			</ul>
-		</section>
-        </main>
-        <footer>
-            <section id="contato" class="contato">
-                <h4>Contato</h4>
-                <p>Instagram:<a href="https://www.instagram.com/prof_deboramoura?igsh=cWppNWJrMXU0b2p1">@prof_deboramoura</a><br>Email: XXXXXXXXXX<br>
-                Telefone: (X) XXXXX-XXXX<br>
-                Endereço: Rua xxxxxxxxx</p>
-            </section>
-            <p>&copy;2024 Ballet Débora Moura.</p>
-        </footer>
-    </body>
+        <!-- Sobre -->
+        <section id="sobre" class="section">
+            <div class="container">
+                <h2>Sobre o Estúdio</h2>
+                <p>O Ballet Débora Moura oferece formação técnica e espaço acolhedor para desenvolvimento artístico de crianças, jovens e adultos. Nossa missão é estimular o crescimento físico, emocional e social por meio da dança.</p>
+                <div class="professora">
+                    <img src="img/corpo_docente.jpg" alt="Débora Moura" class="prof-img">
+                    <div>
+                        <h3>Débora Moura</h3>
+                        <p>Professora com formação em Metodologia da Dança e experiência em ensino infantil e adulto. Apaixonada por ensinar e acompanhar o desenvolvimento de cada aluno.</p>
+                        <ul>
+                            <li>Metodologia da Dança</li>
+                            <li>Psicopedagogia</li>
+                            <li>Educação Física (cursando)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modalidades -->
+        <section id="modalidades" class="section">
+            <div class="container">
+                <h2>Modalidades</h2>
+                <div class="cards">
+                    <article class="card">
+                        <h3>Baby Class</h3>
+                        <p>Aulas lúdicas para crianças pequenas, com estímulos de coordenação e musicalidade.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Clássico</h3>
+                        <p>Formação técnica clássica, postura, força e flexibilidade.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Adulto</h3>
+                        <p>Turmas para adultos iniciantes e avançados com horários especiais.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Jazz / Contemporâneo</h3>
+                        <p>Aulas complementares para expressão corporal e improvisação.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Agenda -->
+        <section id="agenda" class="section">
+            <div class="container">
+                <h2>Agenda e Horários</h2>
+                <table class="agenda-table">
+                    <thead>
+                        <tr><th>Modalidade</th><th>Dia</th><th>Horário</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Baby Class</td><td>Seg, Qua</td><td>09:00 - 10:00</td></tr>
+                        <tr><td>Clássico</td><td>Seg, Qua, Sex</td><td>16:00 - 17:30</td></tr>
+                        <tr><td>Adulto</td><td>Ter, Qui</td><td>19:00 - 20:00</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Galeria -->
+        <section id="galeria" class="section">
+            <div class="container">
+                <h2>Galeria</h2>
+                <div class="gallery-grid">
+                    <img src="img/1.png" alt="Aula de ballet" loading="lazy">
+                    <img src="img/4.png" alt="Aula em estúdio" loading="lazy">
+                    <img src="img/5.png" alt="Apresentação" loading="lazy">
+                    <img src="img/Penguins.jpg" alt="Ensaio" loading="lazy">
+                </div>
+                <div class="video-wrap">
+                    <video src="video/001.mp4" controls preload="metadata">Seu navegador não suporta vídeo.</video>
+                </div>
+            </div>
+        </section>
+
+        <!-- Depoimentos -->
+        <section id="depoimentos" class="section">
+            <div class="container">
+                <h2>Depoimentos</h2>
+                <div class="testimonials">
+                    <blockquote>
+                        "Minha filha evoluiu muito desde que começou as aulas. Ambiente acolhedor e profissionais excelentes." — Maria, mãe
+                    </blockquote>
+                    <blockquote>
+                        "O estúdio tem uma energia incrível e os professores são muito dedicados." — João, aluno
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato -->
+        <section id="contato" class="section contact-section">
+            <div class="container">
+                <h2>Contato & Localização</h2>
+                <div class="contact-grid">
+                    <form class="contact-form" action="#" method="post">
+                        <label for="nome">Nome</label>
+                        <input id="nome" name="nome" type="text" required>
+
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" required>
+
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+                        <button type="submit" class="btn">Enviar</button>
+                    </form>
+                    <div class="contact-info">
+                        <p>WhatsApp: <a href="https://wa.me/5511999999999" target="_blank" rel="noopener">(11) 99999-9999</a></p>
+                        <p>Email: contato@balletdebora.com</p>
+                        <p>Endereço: Rua Exemplo, 123 — Cidade</p>
+                        <div class="map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.000000!2d-46.000000!3d-23.000000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDAwJzAwLjAiUyA0NsKwMDAnMDAuMCJX!5e0!3m2!1spt-BR!2sbr!4v0000000000000" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; <span id="ano"></span> Ballet Débora Moura. Todos os direitos reservados.</p>
+            <div class="socials">
+                <a href="https://www.instagram.com/prof_deboramoura" target="_blank" rel="noopener">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple menu toggle and smooth scroll
+        document.querySelector('.menu-toggle').addEventListener('click', function(){
+            const menu = document.getElementById('main-menu');
+            const expanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', String(!expanded));
+            menu.classList.toggle('open');
+        });
+
+        // smooth scroll for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(a=>{
+            a.addEventListener('click', function(e){
+                const targetId = this.getAttribute('href').slice(1);
+                const target = document.getElementById(targetId);
+                if(target){
+                    e.preventDefault();
+                    window.scrollTo({top: target.offsetTop - 70, behavior: 'smooth'});
+                    // close menu on mobile
+                    const menu = document.getElementById('main-menu');
+                    if(menu.classList.contains('open')){ menu.classList.remove('open'); document.querySelector('.menu-toggle').setAttribute('aria-expanded','false'); }
+                }
+            });
+        });
+
+        // current year
+        document.getElementById('ano').textContent = new Date().getFullYear();
+    </script>
+
+</body>
 </html>
