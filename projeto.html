@@ -25,6 +25,7 @@
                     <li><a href="#galeria">Galeria</a></li>
                     <li><a href="#depoimentos">Depoimentos</a></li>
                     <li><a href="#contato">Contato</a></li>
+                    <li><a href="formulario.html">Matrícula e Rematrícula</a></li>
                 </ul>
             </nav>
         </div>
@@ -47,12 +48,17 @@
         <section id="sobre" class="section">
             <div class="container">
                 <h2>Sobre o Estúdio</h2>
-                <p>O Ballet Débora Moura oferece formação técnica e espaço acolhedor para desenvolvimento artístico de crianças, jovens e adultos. Nossa missão é estimular o crescimento físico, emocional e social por meio da dança.</p>
+                <p>
+                    O Ballet Débora Moura oferece formação técnica e espaço acolhedor para desenvolvimento artístico de crianças, jovens e adultos. Nossa missão é estimular o crescimento físico, emocional e social por meio da dança.
+                </p>
+
                 <div class="professora">
                     <img src="img/corpo_docente.jpg" alt="Débora Moura" class="prof-img">
                     <div>
                         <h3>Débora Moura</h3>
-                        <p>Professora com formação em Metodologia da Dança e experiência em ensino infantil e adulto. Apaixonada por ensinar e acompanhar o desenvolvimento de cada aluno.</p>
+                        <p>
+                            Professora com formação em Metodologia da Dança e experiência em ensino infantil e adulto. Apaixonada por ensinar e acompanhar o desenvolvimento de cada aluno.
+                        </p>
                         <ul>
                             <li>Metodologia da Dança</li>
                             <li>Psicopedagogia</li>
@@ -60,6 +66,25 @@
                         </ul>
                     </div>
                 </div>
+
+                <h3>Nossa História</h3>
+                <p>
+                    Fundado em 2005 pela bailarina e coreógrafa Débora Moura, o Ballet Moura nasceu de um sonho: criar um espaço onde a dança fosse mais do que técnica; fosse uma forma de expressão, disciplina e alegria. Após uma carreira de sucesso nos palcos do Brasil e do exterior, Débora sentiu a necessidade de compartilhar seu conhecimento e sua paixão, acreditando que a dança tem o poder de transformar vidas.
+                </p>
+
+                <p>
+                    O pequeno estúdio, que começou com apenas dez alunas, cresceu e se tornou uma das mais respeitadas escolas de balé da cidade. Mantendo sempre a excelência técnica, o Ballet Moura se destaca por sua abordagem acolhedora e familiar, onde cada aluno, do iniciante ao avançado, é encorajado a encontrar sua própria voz através do movimento.
+                </p>
+
+                <h3>Nossa Filosofia</h3>
+                <p>
+                    No Ballet Moura, acreditamos que a dança é para todos. Nossa filosofia se baseia em três pilares:
+                </p>
+                <ul>
+                    <li><strong>Excelência Técnica:</strong> Oferecemos um ensino de alta qualidade, com metodologias clássicas e contemporâneas, preparando nossos alunos para alcançar seu máximo potencial.</li>
+                    <li><strong>Bem-Estar Integral:</strong> Acreditamos que a dança fortalece não apenas o corpo, mas também a mente e a alma. Nossas aulas promovem disciplina, confiança e autoconhecimento.</li>
+                    <li><strong>Comunidade:</strong> Somos mais que uma escola; somos uma família. Um lugar onde a paixão pela dança nos une e onde as amizades e o respeito mútuo florescem.</li>
+                </ul>
             </div>
         </section>
 
@@ -84,6 +109,14 @@
                         <h3>Jazz / Contemporâneo</h3>
                         <p>Aulas complementares para expressão corporal e improvisação.</p>
                     </article>
+                    <article class="card">
+                        <h3>Workshops</h3>
+                        <p>Eventos especiais com profissionais convidados para enriquecer a experiência dos alunos.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Espetáculos</h3>
+                        <p>Oportunidades para os alunos brilharem no palco e celebrarem o aprendizado.</p>
+                    </article>
                 </div>
             </div>
         </section>
@@ -94,12 +127,28 @@
                 <h2>Agenda e Horários</h2>
                 <table class="agenda-table">
                     <thead>
-                        <tr><th>Modalidade</th><th>Dia</th><th>Horário</th></tr>
+                        <tr>
+                            <th>Modalidade</th>
+                            <th>Dia</th>
+                            <th>Horário</th>
+                        </tr>
                     </thead>
                     <tbody>
-                        <tr><td>Baby Class</td><td>Seg, Qua</td><td>09:00 - 10:00</td></tr>
-                        <tr><td>Clássico</td><td>Seg, Qua, Sex</td><td>16:00 - 17:30</td></tr>
-                        <tr><td>Adulto</td><td>Ter, Qui</td><td>19:00 - 20:00</td></tr>
+                        <tr>
+                            <td>Baby Class</td>
+                            <td>Seg, Qua</td>
+                            <td>09:00 - 10:00</td>
+                        </tr>
+                        <tr>
+                            <td>Clássico</td>
+                            <td>Seg, Qua, Sex</td>
+                            <td>16:00 - 17:30</td>
+                        </tr>
+                        <tr>
+                            <td>Adulto</td>
+                            <td>Ter, Qui</td>
+                            <td>19:00 - 20:00</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -177,7 +226,7 @@
 
     <script>
         // Simple menu toggle and smooth scroll
-        document.querySelector('.menu-toggle').addEventListener('click', function(){
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
             const menu = document.getElementById('main-menu');
             const expanded = this.getAttribute('aria-expanded') === 'true';
             this.setAttribute('aria-expanded', String(!expanded));
@@ -185,16 +234,19 @@
         });
 
         // smooth scroll for internal links
-        document.querySelectorAll('a[href^="#"]').forEach(a=>{
-            a.addEventListener('click', function(e){
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', function(e) {
                 const targetId = this.getAttribute('href').slice(1);
                 const target = document.getElementById(targetId);
-                if(target){
+                if (target) {
                     e.preventDefault();
-                    window.scrollTo({top: target.offsetTop - 70, behavior: 'smooth'});
+                    window.scrollTo({ top: target.offsetTop - 70, behavior: 'smooth' });
                     // close menu on mobile
                     const menu = document.getElementById('main-menu');
-                    if(menu.classList.contains('open')){ menu.classList.remove('open'); document.querySelector('.menu-toggle').setAttribute('aria-expanded','false'); }
+                    if (menu.classList.contains('open')) {
+                        menu.classList.remove('open');
+                        document.querySelector('.menu-toggle').setAttribute('aria-expanded', 'false');
+                    }
                 }
             });
         });
@@ -204,4 +256,5 @@
     </script>
 
 </body>
+
 </html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ballet Débora Moura</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/8.png" type="image/png">
+</head>
+
+<body>
+    <header class="site-header" id="top">
+        <div class="container header-inner">
+            <a href="#top" class="logo-link">
+                <img src="img/logo_superior_branco.png" alt="Ballet Débora Moura" class="logo-img">
+            </a>
+            <button class="menu-toggle" aria-expanded="false" aria-controls="main-menu">Menu</button>
+            <nav id="main-menu" class="main-menu" aria-label="Navegação principal">
+                <ul class="menu">
+                    <li><a href="#hero">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#modalidades">Modalidades</a></li>
+                    <li><a href="#agenda">Agenda</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="formulario.html">Matrícula e Rematrícula</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+         <h2>Matrícula</h2>
+                    <form class="form" name="matricula" action="enviar.php" method="post" autocomplete="on">
+
+                        <div class="form-row">
+                            <label>Tipo de Matrícula</label>
+                            <label><input type="radio" name="rematricula" value="sim" checked> Nova Matrícula</label>
+                            <label><input type="radio" name="rematricula" value="nao"> Renovação</label>
+                        </div>
+
+                        <fieldset>
+                            <legend>Dados do Aluno(a)</legend>
+
+                            <div class="form-row">
+                                <label for="name">Nome Completo</label>
+                                <input id="name" type="text" name="name" />
+                            </div>
+
+                            <div class="form-row">
+                                <label for="dataNascimento">Data de Nascimento</label>
+                                <input id="dataNascimento" type="date" name="date" onchange="calcularIdade()" />
+                            </div>
+
+                            <div class="form-row">
+                                <label for="idade">Idade</label>
+                                <input id="idade" type="text" readonly /> <span>anos</span>
+                            </div>
+
+                            <div class="form-row">
+                                <label>Sexo</label>
+                                <label><input type="radio" name="sexo" value="masculino" checked> Masculino</label>
+                                <label><input type="radio" name="sexo" value="feminino"> Feminino</label>
+                                <label><input type="radio" name="sexo" value="outro"> Outro</label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Modalidade</legend>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox" name="modalidade" value="ballet"> Ballet</label>
+                                <label><input type="checkbox" name="modalidade" value="contemporaneo"> Contemporâneo</label>
+                                <label><input type="checkbox" name="modalidade" value="jazz"> Jazz</label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Turmas</legend>
+                            <div class="checkbox-group">
+                                <strong>Ballet:</strong>
+                                <label><input type="checkbox" class="turma" data-min="3" data-max="5" value="Ballet - Turma 1"> Turma 1 (3-5 anos)</label>
+                                <label><input type="checkbox" class="turma" data-min="6" data-max="9" value="Ballet - Turma 2"> Turma 2 (6-9 anos)</label>
+                                <label><input type="checkbox" class="turma" data-min="10" data-max="16" value="Ballet - Turma 3"> Turma 3 (10-16 anos)</label>
+                                <label><input type="checkbox" class="turma" data-min="17" data-max="60" value="Ballet - Turma 4"> Turma 4 (17-60 anos)</label>
+
+                                <strong>Contemporâneo:</strong>
+                                <label><input type="checkbox" class="turma" data-min="3" data-max="5" value="Contemporâneo - Turma 1"> Turma 1 (3-5 anos)</label>
+                                <label><input type="checkbox" class="turma" data-min="6" data-max="9" value="Contemporâneo - Turma 2"> Turma 2 (6-9 anos)</label>
+                                <label><input type="checkbox" class="turma" data-min="10" data-max="16" value="Contemporâneo - Turma 3"> Turma 3 (10-16 anos)</label>
+                                <label><input type="checkbox" class="turma" data-min="17" data-max="60" value="Contemporâneo - Turma 4"> Turma 4 (17-60 anos)</label>
+
+                                <strong>Jazz:</strong>
+                                <label><input type="checkbox" class="turma" data-min="3" data-max="5" value="Jazz - Turma 1"> Turma 1 (3-5 anos)</label>
+                                <label><input type="checkbox" class="turma" data-min="6" data-max="9" value="Jazz - Turma 2"> Turma 2 (6-9 anos)</label>
+                                <label><input type="checkbox" class="turma" data-min="10" data-max="16" value="Jazz - Turma 3"> Turma 3 (10-16 anos)</label>
+                                <label><input type="checkbox" class="turma" data-min="17" data-max="60" value="Jazz - Turma 4"> Turma 4 (17-60 anos)</label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Dados do(a) Responsável</legend>
+                            <div class="form-row">
+                                <label for="responsavel_nome">Nome Completo</label>
+                                <input id="responsavel_nome" type="text" name="responsavel_nome" />
+                            </div>
+                            <div class="form-row">
+                                <label for="responsavel_data">Data de Nascimento</label>
+                                <input id="responsavel_data" type="date" name="responsavel_data" />
+                            </div>
+                            <div class="form-row">
+                                <label for="celular">Celular</label>
+                                <input id="celular" type="tel" name="celular" />
+                            </div>
+                            <div class="form-row">
+                                <label for="telefone">Telefone</label>
+                                <input id="telefone" type="tel" name="telefone" />
+                            </div>
+                            <div class="form-row">
+                                <label for="email">E-mail</label>
+                                <input id="email" type="email" name="email" />
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Endereço</legend>
+                            <div class="form-row">
+                                <label for="endereco">Endereço</label>
+                                <input id="endereco" type="text" name="endereco" />
+                                <small><sup>Rua, Av, Etc.</sup></small>
+                            </div>
+                            <div class="form-row">
+                                <label for="complemento">Complemento</label>
+                                <input id="complemento" type="text" name="complemento" />
+                            </div>
+                            <div class="form-row">
+                                <label for="cidade">Cidade</label>
+                                <input id="cidade" type="text" name="cidade" />
+                            </div>
+                            <div class="form-row">
+                                <label for="bairro">Bairro</label>
+                                <input id="bairro" type="text" name="bairro" />
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Observações</legend>
+                            <textarea name="observacoes" rows="4" placeholder="Digite aqui suas observações..."></textarea>
+                        </fieldset>
+
+                        <div class="form-actions">
+                            <button class="btn-primary" type="submit">Enviar</button>
+                            <button class="btn-outline" type="reset">Limpar</button>
+                        </div>
+                    </form>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; <span id="ano"></span> Ballet Débora Moura. Todos os direitos reservados.</p>
+            <div class="socials">
+                <a href="https://www.instagram.com/prof_deboramoura" target="_blank" rel="noopener">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple menu toggle and smooth scroll
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('main-menu');
+            const expanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', String(!expanded));
+            menu.classList.toggle('open');
+        });
+
+        // smooth scroll for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href').slice(1);
+                const target = document.getElementById(targetId);
+                if (target) {
+                    e.preventDefault();
+                    window.scrollTo({ top: target.offsetTop - 70, behavior: 'smooth' });
+                    // close menu on mobile
+                    const menu = document.getElementById('main-menu');
+                    if (menu.classList.contains('open')) {
+                        menu.classList.remove('open');
+                        document.querySelector('.menu-toggle').setAttribute('aria-expanded', 'false');
+                    }
+                }
+            });
+        });
+
+        // current year
+        document.getElementById('ano').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+
+</html>
