@@ -51,9 +51,8 @@ body {
 .hero-subtitle{ font-size:1.1rem; margin:0 0 18px; }
 .btn{ display:inline-block; background:transparent; border:2px solid transparent; color:inherit; padding:10px 16px; border-radius:6px; text-decoration:none; cursor:pointer; font-weight:600; }
 
-/* Primary button: green with white text and subtle animation */
 .btn-primary{
-  background:#28a745; /* verde */
+  background:#28a745; 
   border-color:#28a745;
   color:#ffffff;
   transition: transform 200ms ease, box-shadow 200ms ease, opacity 200ms ease;
@@ -63,7 +62,6 @@ body {
 .btn-primary:active{ transform: translateY(-1px) scale(0.995); }
 .btn-primary:focus{ outline: 3px solid rgba(40,167,69,0.18); outline-offset: 3px; }
 
-/* Outline button (Limpar): border with same animation behavior */
 .btn-outline{
   background: transparent;
   color: #28a745;
@@ -91,8 +89,39 @@ body {
 .card{ background:#fff; padding:16px; border-radius:var(--radius); box-shadow:0 6px 18px rgba(0,0,0,0.06); }
 
 /* Agenda */
-.agenda-table{ width:100%; border-collapse:collapse; margin-top:12px; }
-.agenda-table th, .agenda-table td{ padding:10px 8px; border:1px solid #eee; text-align:left; }
+.tabela-horarios {
+    width: 100%; 
+    border-collapse: collapse;
+    margin-top: 30px;
+    font-size: 1em;
+    text-align: left;
+}
+.tabela-horarios thead th {
+    background-color: #F8F8F8; 
+    color: #333333; 
+    padding: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 2px solid #DDDDDD; 
+}
+.tabela-horarios tbody td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #EEEEEE; 
+    color: #555555;
+}
+.tabela-horarios tbody tr:hover {
+    background-color: #FAFAFA; 
+    cursor: default;
+}
+.tabela-horarios tbody td:first-child {
+    font-weight: 600;
+    color: #000000; 
+}
+@media (max-width: 768px) {
+    .tabela-horarios, .tabela-horarios thead, .tabela-horarios tbody, .tabela-horarios th, .tabela-horarios td, .tabela-horarios tr {
+        display: block;
+    }
+}
 
 /* Galeria */
 .gallery-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin-top:12px; }
@@ -112,7 +141,7 @@ body {
 
 /* Estilo específico para o botão Enviar no formulário de contato */
 .contact-form .btn[type="submit"]{
-  background: var(--accent); /* #c94aa6 */
+  background: var(--accent); 
   color: #ffffff;
   border: 2px solid var(--accent);
   padding: 10px 18px;
@@ -145,6 +174,7 @@ body {
     .contact-grid{ grid-template-columns:1fr; }
 }
 
+/* Formulário */
 .form {
   max-width: 900px;
   background: rgba(255,255,255,0.02);

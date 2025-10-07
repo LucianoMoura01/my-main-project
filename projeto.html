@@ -125,32 +125,88 @@
         <section id="agenda" class="section">
             <div class="container">
                 <h2>Agenda e Horários</h2>
-                <table class="agenda-table">
-                    <thead>
-                        <tr>
-                            <th>Modalidade</th>
-                            <th>Dia</th>
-                            <th>Horário</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Baby Class</td>
-                            <td>Seg, Qua</td>
-                            <td>09:00 - 10:00</td>
-                        </tr>
-                        <tr>
-                            <td>Clássico</td>
-                            <td>Seg, Qua, Sex</td>
-                            <td>16:00 - 17:30</td>
-                        </tr>
-                        <tr>
-                            <td>Adulto</td>
-                            <td>Ter, Qui</td>
-                            <td>19:00 - 20:00</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <table class="tabela-horarios">
+    
+    <thead>
+        <tr>
+            <th>Modalidade</th>
+            <th>Nível / Faixa Etária</th>
+            <th>Dias da Semana</th>
+            <th>Horário</th>
+        </tr>
+    </thead>
+    
+    <tbody>
+        <tr>
+            <td>Balé Clássico</td>
+            <td>Infantil (3-6 anos)</td>
+            <td>Terça e Quinta</td>
+            <td>10:00 - 11:00</td>
+        </tr>
+        <tr>
+            <td>Balé Clássico</td>	
+            <td>Infantil (3-6 anos)</td>
+            <td>Quarta e Sexta</td>
+            <td>15:00 - 16:00</td>
+        </tr>
+        <tr>
+            <td>Balé Clássico</td>
+            <td>Intermediário (7-12 anos)</td>
+            <td>Segunda e Quarta</td>
+            <td>17:00 - 18:30</td>
+        </tr>
+        <tr>
+            <td>Balé Clássico</td>
+            <td>Intermediário (7-12 anos)</td>
+            <td>Terça e Quinta</td>
+            <td>16:00 - 17:30</td>
+        </tr>
+        <tr>
+            <td>Balé Clássico</td>
+            <td>Avançado (13+ anos)</td>
+            <td>Segunda, Quarta e Sexta</td>
+            <td>18:30 - 20:00</td>
+        </tr>
+        <tr>
+            <td>Balé Clássico</td>
+            <td>Adultos (Iniciante)</td>
+            <td>Terça e Quinta</td>
+            <td>19:00 - 20:30</td>
+        </tr>
+        <tr>
+            <td>Balé Clássico</td>
+            <td>Adultos (Experiente)</td>
+            <td>Segunda e Quarta</td>
+            <td>20:00 - 21:30</td>
+        </tr>
+
+        <tr>
+            <td>Dança Contemporânea</td>
+            <td>Iniciante</td>
+            <td>Sábado</td>
+            <td>09:00 - 10:30</td>
+        </tr>
+        <tr>
+            <td>Dança Contemporânea</td>
+            <td>Avançado</td>
+            <td>Sábado</td>
+            <td>10:30 - 12:00</td>
+        </tr>
+
+        <tr>
+            <td>Jazz Dance</td>
+            <td>Intermediário</td>
+            <td>Sexta</td>
+            <td>17:00 - 18:30</td>
+        </tr>
+        <tr>
+            <td>Jazz Dance</td>
+            <td>Avançado</td>
+            <td>Sexta</td>
+            <td>18:30 - 20:00</td>
+        </tr>
+    </tbody>
+</table>
             </div>
         </section>
 
@@ -224,36 +280,7 @@
         </div>
     </footer>
 
-    <script>
-        // Simple menu toggle and smooth scroll
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            const menu = document.getElementById('main-menu');
-            const expanded = this.getAttribute('aria-expanded') === 'true';
-            this.setAttribute('aria-expanded', String(!expanded));
-            menu.classList.toggle('open');
-        });
-
-        // smooth scroll for internal links
-        document.querySelectorAll('a[href^="#"]').forEach(a => {
-            a.addEventListener('click', function(e) {
-                const targetId = this.getAttribute('href').slice(1);
-                const target = document.getElementById(targetId);
-                if (target) {
-                    e.preventDefault();
-                    window.scrollTo({ top: target.offsetTop - 70, behavior: 'smooth' });
-                    // close menu on mobile
-                    const menu = document.getElementById('main-menu');
-                    if (menu.classList.contains('open')) {
-                        menu.classList.remove('open');
-                        document.querySelector('.menu-toggle').setAttribute('aria-expanded', 'false');
-                    }
-                }
-            });
-        });
-
-        // current year
-        document.getElementById('ano').textContent = new Date().getFullYear();
-    </script>
+    <script defer src="script.js"></script>
 
 </body>
 
