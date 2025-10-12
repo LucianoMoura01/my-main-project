@@ -139,7 +139,6 @@ body {
 .contact-form .btn{ margin-top:12px; }
 .map iframe{ border-radius:8px; }
 
-/* Estilo específico para o botão Enviar no formulário de contato */
 .contact-form .btn[type="submit"]{
   background: var(--accent); 
   color: #ffffff;
@@ -168,7 +167,6 @@ body {
 /* Responsive */
 @media (max-width: 900px){
   .menu-toggle{ display:inline-block; }
-  /* Menu responsivo: ocupa a largura disponível com margens laterais, lista em coluna e scroll quando necessário */
   .main-menu{
     display:none;
     position:absolute;
@@ -254,6 +252,58 @@ legend {
   display: flex;
   gap: 8px;
   align-items: center;
+  transition: opacity 0.3s ease;
+}
+
+.checkbox-group label input[type="checkbox"]:disabled {
+  cursor: not-allowed;
+}
+
+.checkbox-group label input[type="checkbox"]:disabled + span {
+  color: #999;
+  text-decoration: line-through;
+}
+
+.checkbox-group label[title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  background: #333;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 1000;
+  margin-top: 20px;
+  margin-left: -50px;
+}
+
+.idade-info {
+  color: var(--color-primary);
+  font-weight: 500;
+  margin-left: 8px;
+}
+
+#idade {
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+.idade-mensagem {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  padding: 12px;
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.idade-mensagem p {
+  margin: 4px 0;
+}
+
+.idade-mensagem strong {
+  color: var(--color-primary);
 }
 .form-actions {
   margin-top: 12px;
