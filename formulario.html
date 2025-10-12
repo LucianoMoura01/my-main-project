@@ -62,9 +62,23 @@
 
                             <div class="form-row">
                                 <label>Sexo</label>
-                                <label><input type="radio" name="sexo" value="masculino" checked> Masculino</label>
-                                <label><input type="radio" name="sexo" value="feminino"> Feminino</label>
-                                <label><input type="radio" name="sexo" value="outro"> Outro</label>
+                                <label>
+                                    <input type="radio" name="sexo" value="masculino" checked> Masculino</label>
+                                <label>
+                                    <input type="radio" name="sexo" value="feminino"> Feminino</label>
+                            </div>
+
+                            <div class="form-row">
+                                <label for="alergia">Possui alguma alergia?</label>
+                                <div class="radio-group">
+                                    <label>
+                                        <input type="radio" name="alergia_radio" value="nao" checked onchange="toggleAlergiaField()"> Não
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="alergia_radio" value="sim" onchange="toggleAlergiaField()"> Sim
+                                    </label>
+                                </div>
+                                <input id="alergia_descricao" type="text" name="alergia_descricao" placeholder="Descreva a alergia..." disabled />
                             </div>
                         </fieldset>
 

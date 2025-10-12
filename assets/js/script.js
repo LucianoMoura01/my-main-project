@@ -93,7 +93,31 @@
         }
     }
 
+    // Função para controlar o campo de alergia
+    function toggleAlergiaField() {
+        const radioSim = document.querySelector('input[name="alergia_radio"][value="sim"]');
+        const radioNao = document.querySelector('input[name="alergia_radio"][value="nao"]');
+        const campoAlergia = document.getElementById('alergia_descricao');
+        
+        if (!campoAlergia) return;
+        
+        if (radioSim && radioSim.checked) {
+            campoAlergia.disabled = false;
+            campoAlergia.required = true;
+            campoAlergia.style.opacity = '1';
+            campoAlergia.style.cursor = 'text';
+            campoAlergia.focus();
+        } else {
+            campoAlergia.disabled = true;
+            campoAlergia.required = false;
+            campoAlergia.value = ''; 
+            campoAlergia.style.opacity = '0.5';
+            campoAlergia.style.cursor = 'not-allowed';
+        }
+    }
+
     window.calcularIdade = calcularIdade;
+    window.toggleAlergiaField = toggleAlergiaField;
 
     document.addEventListener('DOMContentLoaded', function(){
         const menuToggle = document.querySelector('.menu-toggle');
@@ -123,5 +147,7 @@
 
         const anoEl = document.getElementById('ano');
         if(anoEl) anoEl.textContent = new Date().getFullYear();
+        
+        toggleAlergiaField();
     });
 })();
