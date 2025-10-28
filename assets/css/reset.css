@@ -8,3 +8,22 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.root{
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #fff;
+    --accent: #c94aa6; 
+    --accent-dark: #a4347f;
+    --muted: #666;
+    --container: 1100px;
+    --radius: 10px;
+}
+
+*,
+*::before,
+*::after { 
+  box-sizing: inherit; 
+}
