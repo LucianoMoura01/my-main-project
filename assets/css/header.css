@@ -1,0 +1,44 @@
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    background: rgba(255, 174, 238, 0.90);
+    border-bottom: 0px solid #eee;
+}
+.header-inner { 
+  display:flex; 
+  align-items:center; 
+  justify-content:space-between; 
+  padding:12px 0; 
+}
+.logo-img{ 
+  height:48px; 
+}
+.menu-toggle{ 
+  display:none; 
+  background:var(--accent); 
+  color:#fff; 
+  border:none; 
+  padding:8px 12px; 
+  border-radius:6px; 
+}
+.main-menu ul{ 
+  list-style:none; 
+  margin:0; 
+  padding:0; 
+  display:flex; 
+  gap:12px; 
+}
+.main-menu a{ 
+  text-decoration:none; 
+  color:var(--muted); 
+  padding:8px 10px; 
+  border-radius:6px; 
+}
+.main-menu a:hover{ 
+  color:var(--accent-dark); 
+}
+.main-menu.open{ 
+  display:block; 
+}

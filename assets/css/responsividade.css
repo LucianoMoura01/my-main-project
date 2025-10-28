@@ -1,0 +1,103 @@
+@media (max-width: 768px) {
+  .modal-content {
+    max-width: 95vw;
+    max-height: 85vh;
+  }
+  
+  .modal-close {
+    top: -40px;
+    right: -10px;
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+  
+  .modal-nav {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+  
+  .modal-nav.prev {
+    left: -60px;
+  }
+  
+  .modal-nav.next {
+    right: -60px;
+  }
+  
+  .modal-counter {
+    bottom: -40px;
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-nav.prev {
+    left: 10px;
+    top: 10px;
+    transform: none;
+  }
+  
+  .modal-nav.next {
+    right: 10px;
+    top: 10px;
+    transform: none;
+  }
+  
+  .modal-close {
+    top: 10px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+  
+  .modal-counter {
+    bottom: 10px;
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  .menu-toggle{ 
+    display:inline-block; 
+  }
+  .main-menu{
+    display:none;
+    position:absolute;
+    top:64px;
+    left:16px;
+    right:16px;
+    background:#ffffff;
+    padding:12px;
+    border-radius:8px;
+    box-shadow:0 8px 24px rgba(0,0,0,0.12);
+    max-height: calc(100vh - 90px);
+    overflow:auto;
+    box-sizing: border-box;
+  }
+  .main-menu.open{ 
+    display:block; 
+  }
+  .main-menu ul{ 
+    flex-direction: column; 
+    gap:8px; 
+  }
+  .main-menu a{ 
+    display:block; 
+    width:100%; 
+    padding:10px 12px; 
+  }
+    .professora{ 
+      flex-direction:column; 
+      text-align:center; 
+    }
+    .contact-content{ 
+      gap: 20px; 
+    }
+    
+    .video-container {
+        max-width: 100%;
+        margin: 0 16px;
+    }
+}
